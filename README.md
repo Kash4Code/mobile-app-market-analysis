@@ -119,4 +119,4 @@ If you found this project helpful or insightful, please consider **starring** тн
 Have suggestions or feedback? Feel free to open an issue or connect with me:
 
 [![GitHub](https://img.shields.io/badge/GitHub-Kash4Code-181717?style=flat&logo=github)](https://github.com/Kash4Code)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat&logo=linkedin)]((https://www.linkedin.com/in/kashinathrp/))
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat&logo=linkedin)](https://www.linkedin.com/in/kashinathrp/)
