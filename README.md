@@ -37,6 +37,7 @@ This project aims to:
 ├── data/               # Raw and processed app store datasets
 ├── notebooks/          # Exploratory Data Analysis & cleaning steps
 ├── visuals/            # Exported charts and summary graphs
+├── .gitignore          # Files Git should ignore
 ├── README.md           # Documentation
 └── requirements.txt    # Project dependencies
 ```
