@@ -2,10 +2,8 @@
 
 # 📱 Mobile App Market Analysis: Google Play vs. App Store
 
-**A data-driven exploration of free mobile applications on the **Google Play Store** and **Apple App Store**. This project cleans raw store data and analyzes category distribution, install counts, and cross-platform market focus to help developers make informed product decisions.**
-
-![Python](https://img.shields.io/badge/Python-3.8%2B-blue?style=for-the-badge&logo=python&logoColor=white)
-![Matplotlib](https://img.shields.io/badge/Matplotlib-3.x-11557c?style=for-the-badge&logo=python&logoColor=white)
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Matplotlib](https://img.shields.io/badge/Matplotlib-3.x-11557c?style=for-the-badge&logo=python&logoColor=white)](https://matplotlib.org/)
 
 </div>
 
