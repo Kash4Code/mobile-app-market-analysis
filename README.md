@@ -64,7 +64,7 @@ In the crowded mobile application ecosystem, building an app without market vali
 
 ```text
 Language     :  Python 3.8+
-Visuals      :  Matplotlib, Seaborn
+Visuals      :  Matplotlib
 Environment  :  Jupyter Notebook / VS Code
 ```
 
