@@ -76,7 +76,7 @@ Environment  :  Jupyter Notebook / VS Code
 mobile-app-market-analysis/
 ├── data/               # Raw datasets
 ├── notebooks/          # Exploratory Data Analysis & cleaning steps
-    └── app_analysis.ipynb
+    └── analysis.ipynb
 ├── visuals/            # Exported charts and summary graphs
 ├── .gitignore          # Files Git should ignore
 ├── README.md           # Documentation
@@ -108,7 +108,7 @@ mobile-app-market-analysis/
    ```
 
 3. **Run the analysis:**
-   Open `notebooks/app_analysis.ipynb` in Jupyter Notebook or VS Code and execute all cells.
+   Open `notebooks/analysis.ipynb` in Jupyter Notebook or VS Code and execute all cells.
 
 ---
 
