@@ -1,122 +1,41 @@
-<div align="center">
+# Mobile App Market Analysis: Google Play vs. App Store
 
-# 📱 Mobile App Market Analysis: Google Play vs. App Store
+## Business Question
+Which mobile app categories are oversaturated versus underserved across the Google Play Store and Apple App Store, and where is there a viable, low-competition niche for a new app?
 
-[![Python](https://img.shields.io/badge/Python-3.8%2B-blue?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![Matplotlib](https://img.shields.io/badge/Matplotlib-3.x-11557c?style=for-the-badge&logo=python&logoColor=white)](https://matplotlib.org/)
+## Dataset
+- **Source:** [Apple App Store dataset](data/AppleStore.csv) and [Google Play Store dataset](data/googleplaystore.csv) (Kaggle)
+- **Size:** 18,000+ combined app records across both platforms
+- **Description:** Each row represents one app, with fields including category/genre, install count (or install count band), rating, price, and content type, collected as a snapshot of each store's catalog.
 
-</div>
+## Tools Used
+- Python (pandas) — data cleaning, deduplication, and null handling
+- Python (matplotlib) — visualization of category composition and install distributions
+- Jupyter Notebook — exploratory data analysis workflow
 
----
-
-## 📌 Business Problem & Objectives
-
-In the crowded mobile application ecosystem, building an app without market validation risks launching into highly saturated or giant-dominated categories. Acting as a lead Data Analyst for an ad-supported app development firm, this project analyzes historical datasets from the **[Apple App Store](data/AppleStore.csv)** and **[Google Play Store](data/googleplaystore.csv)** to locate viable product niches.
-
-### Core Goals
-* **🧹 Clean & Standardize:** Normalize distinct store attributes across 18,000+ app entries.
-* **📈 Measure Engagement:** Evaluate user audience reach across 30+ unique app genres.
-* **🎯 Identify High-Growth Niches:** Isolate unsaturated market segments with strong cross-platform demand.
-
----
-
-## 📊 Key Insights & Visualizations
-
-### 1. Cross-Platform Market Composition
-
-<div align="center">
-  <img src="visuals/market_composition.png" alt="Market Composition" width="850">
-</div>
-
-> [!NOTE]
-> * **iOS App Store is Gaming-Dominated:** Over **58.2%** of all free apps fall into the Gaming genre.
-> * **Google Play Store is Diversified:** Games and Family apps make up only **28.6%**, leaving **71.4%** distributed across productivity, tools, and lifestyle apps.
-
----
-
-### 2. Category Reach vs. Data Skewness
-
-| Category Demand (Android) | Statistical Outlier Impact |
-| :--- | :--- |
-| <img src="visuals/android_popular_categories.png" width="450"> | <img src="visuals/outlier_impact_communication.png" width="450"> |
-| **Top Categories:** **Communication** leads Google Play with an average of **~38.5M installs**, followed by **Video Players** (~24.7M) and **Social** (~23.2M). | **Impact of Skewness:** Removing 100M+ mega-apps (e.g., WhatsApp, Gmail) drops Communication from **38.5M to 3.6M installs** (~90.6% reduction). |
-
----
-
-## 💡 Final Conclusion & Recommendation
-
-> [!TIP]
-> ### 🏆 Winning Product Concept: Feature-Rich Interactive Book App
-> Instead of building a generic ebook reader or library app (which competes directly with Amazon Kindle and Google Play Books), build a **dedicated interactive application around a single popular book or topic**.
-
-### Key Value Differentiators
-* **💬 Interactive Engagement:** Daily quote widgets, progress quizzes, and community reader discussions.
-* **🎧 Multimodal Media:** Built-in narration audio with synchronous sentence highlighting.
-* **📖 Integrated Utilities:** Built-in dictionary lookups so readers never leave the app interface.
-
-### Platform Strategy
-* **App Store (iOS):** Captures high-intent users seeking practical, utility-driven content amidst a store dominated by games.
-* **Google Play (Android):** Drives wide reach using a freemium ad-supported model (free chapter access with rewarded video ad unlocks for bonus features).
-
----
-
-## 🛠️ Tools & Tech Stack
-
-```text
-Language     :  Python 3.8+
-Visuals      :  Matplotlib
-Environment  :  Jupyter Notebook / VS Code
-```
-
----
-
-## 📁 Repository Structure
-
-```text
-mobile-app-market-analysis/
-├── data/               # Raw datasets
-├── notebooks/          # Exploratory Data Analysis & cleaning steps
-    └── analysis.ipynb
-├── visuals/            # Exported charts and summary graphs
-├── .gitignore          # Files Git should ignore
-├── README.md           # Documentation
-└── requirements.txt    # Project dependencies
-```
-
----
-
-## 🚀 How to Run the Project Locally
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/Kash4Code/mobile-app-market-analysis.git
-   cd mobile-app-market-analysis
-   ```
+## Key Findings
+1. **The App Store is heavily gaming-dominated, Google Play is not** — Games account for 58.2% of all free iOS apps, versus just 28.6% for Games + Family combined on Android, leaving 71.4% of Android's free-app catalog spread across productivity, tools, and lifestyle categories.
    
-2. **Set up a virtual environment**
-   ```bash
-   python -m venv venv
-   # Activate on Windows:
-   .\venv\Scripts\Activate.ps1
-   # Activate on Mac/Linux:
-   source venv/bin/activate
-   ```
+    <img src="visuals/market_composition.png" width="750">
    
-2. **Install dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
+3. **A handful of mega-apps distort category-level install averages** — Communication leads Android by raw average installs (~38.5M), but removing 100M+ install outliers (e.g. WhatsApp, Gmail) drops that average to ~3.6M — a ~90.6% reduction — revealing the "true" mid-market install expectation for a new entrant.
 
-3. **Run the analysis:**
-   Open `notebooks/analysis.ipynb` in Jupyter Notebook or VS Code and execute all cells.
+   <img src="visuals/outlier_impact_communication.png" width="600">
+   
+5. **Books & Reference is a high-engagement, underserved niche** — the category averages 8.7M installs despite far less competition than Games or Communication, pointing to a viable, less saturated space for a new app.
 
----
+## Recommendations
+- **Target the Books & Reference niche** with a differentiated product — not a generic ebook reader, but a single-topic interactive app (e.g. built-in narration, progress quizzes, community discussion) that avoids competing head-on with Kindle or Google Play Books.
+- **Differentiate platform strategy at launch:** position as a premium/utility purchase on iOS, where users are more accustomed to paying for non-gaming utility apps; use a freemium, ad-supported model on Android to maximize reach given its larger and more price-sensitive user base.
 
-## 🌟 Support & Feedback
+## Files
+- `data/AppleStore.csv`, `data/googleplaystore.csv` — raw source datasets
+- `notebooks/analysis.ipynb` — full cleaning, EDA, and visualization workflow
+- `visuals/` — exported charts referenced in this README
 
-If you found this project helpful or insightful, please consider **starring** ⭐ the repository and **forking** 🍴 it to build upon it!
+## Methodology
+Both datasets were cleaned independently before comparison: duplicate entries were removed (~1,100 across the combined data), missing values in category and install fields were resolved, and install counts — which Google Play reports as bucketed ranges (e.g. "1,000,000+") rather than exact figures — were standardized to their lower-bound numeric value to allow consistent cross-platform aggregation.
 
-Have suggestions or feedback? Feel free to open an issue or connect with me:
+Category-level analysis used custom pandas frequency tables to compare genre distribution and average installs across both stores. To avoid a small number of extreme outliers (globally dominant apps like WhatsApp and Gmail) skewing category averages, a secondary analysis recalculated installs after excluding apps above the 100M-install threshold, which reveals a more realistic benchmark for what a new, non-mega app in that category could expect.
 
-[![GitHub](https://img.shields.io/badge/GitHub-Kash4Code-181717?style=flat&logo=github)](https://github.com/Kash4Code)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat&logo=linkedin)](https://www.linkedin.com/in/kashinathrp/)
+**Limitations:** Google Play's bucketed install counts are approximate by design, so all Android install figures in this analysis represent a lower bound rather than an exact count. The dataset is also a single-point-in-time snapshot, so it reflects category saturation and demand at time of collection rather than current market conditions — a live app would need this analysis re-run against current data before acting on it.
