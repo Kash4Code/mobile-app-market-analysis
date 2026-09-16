@@ -22,8 +22,11 @@ Which mobile app categories are oversaturated versus underserved across the Goog
 
    <img src="visuals/outlier_impact_communication.png" width="600">
    
-5. **Books & Reference is a high-engagement, underserved niche** — the category averages 8.7M installs despite far less competition than Games or Communication, pointing to a viable, less saturated space for a new app.
+5. **Books & Reference is a high-engagement, moderately-competitive niche** — the category averages ~8.7M installs while carrying far fewer competing apps than the most saturated category (Games), pointing to a viable space for a new app without the crowding of the platform's biggest genres.
 
+   <img src="visuals/books_reference_opportunity_scatter.png" width="900">
+
+   
 ## Recommendations
 - **Target the Books & Reference niche** with a differentiated product — not a generic ebook reader, but a single-topic interactive app (e.g. built-in narration, progress quizzes, community discussion) that avoids competing head-on with Kindle or Google Play Books.
 - **Differentiate platform strategy at launch:** position as a premium/utility purchase on iOS, where users are more accustomed to paying for non-gaming utility apps; use a freemium, ad-supported model on Android to maximize reach given its larger and more price-sensitive user base.
